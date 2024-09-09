@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3FA06B9-E26A-4B99-8449-C1974D450EC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WUZZUF</RootNamespace>
+    <AssemblyName>WUZZUF</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>D:\app\www\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegUser.Designer.cs">
+      <DependentUpon>RegUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegCompany.Designer.cs">
+      <DependentUpon>RegCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compHomePage.Designer.cs">
+      <DependentUpon>compHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewJobD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewJobD.Designer.cs">
+      <DependentUpon>ViewJobD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserHomePage.Designer.cs">
+      <DependentUpon>UserHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlPage.Designer.cs">
+      <DependentUpon>ControlPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegUser.resx">
+      <DependentUpon>RegUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegCompany.resx">
+      <DependentUpon>RegCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compHomePage.resx">
+      <DependentUpon>compHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewJobD.resx">
+      <DependentUpon>ViewJobD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHomePage.resx">
+      <DependentUpon>UserHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlPage.resx">
+      <DependentUpon>ControlPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floor1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-26 at 10.49.46 AM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-26 at 10.49.46 AM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1271818873-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1271818873-612x612 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light-background-darkblue-basic-wallpaper-preview5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-28 at 10.05.25 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2023-04-28 at 10.05.25 PM1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mohamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mohamed1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bathroom-floor-tiles-textured-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_bathroom-floor-tiles-textured-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1bathroom-floor-tiles-textured-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_24k-black-wallpaper-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_124k-black-wallpaper-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_124k-black-wallpaper-141.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_تصميم_بدون_عنوان.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\تصميم بدون عنوان.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_eventos-mgm_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-04-29 092118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_081958vxwgk2tbgtikbisx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_depositphotos_4909410-stock-photo-two-businessmen-discussing-isolated-studio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_3-14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e0396ebef4a3f4eeba1d08728ddb7478.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
